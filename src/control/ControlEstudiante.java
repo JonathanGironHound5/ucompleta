@@ -14,6 +14,18 @@ import modelo.Estudiante;
  */
 public class ControlEstudiante {
 
+    public static boolean insertEstudianteFoto(LinkedList<Estudiante> le) {
+       
+        String sql = "";
+        
+        for (int i = 0; i < le.size(); i++) {
+           sql = "INSERT INTO estudiantes (identificacione,codigoe,nombre1e,apellido1e,direccione,correoe,jornada,Fotoestudiante) VALUES "
+                    + "('" + le.get(i).getIdentificacione() + "', '" + le.get(i).getCodigoe() + "', '" + le.get(i).getNombre1e() + "', '"
+                    + le.get(i).getApellido1e() + "', '" + le.get(i).getDireccione() + "', '" + le.get(i).getCorreoe() + "', '" + le.get(i).getJornada() +"'; '"+ le.get(i).getFotoestudiante() + "');";
+            
+        }
+    }
+
     public ControlEstudiante() {
     }
 
